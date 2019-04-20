@@ -1,0 +1,163 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: "0.1"
+servers:
+- url: http://127.0.0.1:4999
+paths:
+  /student/Mustafa:
+    put:
+      description: Auto generated using Swagger Inspector
+      parameters:
+      - name: Content-Type
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: application%2Fjson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body'
+            examples:
+              0:
+                value: '{"entityClass_id" : 1}'
+              1:
+                value: '{"entityClass_id" : 5}'
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                0:
+                  value: |
+                    {
+                        "name": "Mustafa",
+                        "created_on": "2019-04-19 08:05:36",
+                        "updated_on": "2019-04-19 10:20:28"
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                0:
+                  value: |
+                    "Student Deleted"
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+  /students:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+              examples:
+                0:
+                  value: |
+                    {
+                        "entityStudents": [
+                            {
+                                "name": "Mustafa",
+                                "created_on": "2019-04-19 07:18:35",
+                                "updated_on": "2019-04-19 07:18:35"
+                            },
+                            {
+                                "name": "Rahul",
+                                "created_on": "2019-04-19 07:19:50",
+                                "updated_on": "2019-04-19 07:19:50"
+                            }
+                        ]
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+  /student/Geetika:
+    post:
+      description: Auto generated using Swagger Inspector
+      parameters:
+      - name: Content-Type
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: application%2Fjson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body_1'
+            examples:
+              0:
+                value: '{"entityClass_id" : 3}'
+      responses:
+        201:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                0:
+                  value: |
+                    {
+                        "name": "Geetika",
+                        "created_on": "2019-04-19 10:13:52",
+                        "updated_on": "2019-04-19 10:13:52"
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+components:
+  schemas:
+    body:
+      type: object
+      properties:
+        entityClass_id:
+          type: integer
+    inline_response_200:
+      type: object
+      properties:
+        updated_on:
+          type: string
+        created_on:
+          type: string
+        name:
+          type: string
+    inline_response_200_1:
+      type: object
+      properties:
+        entityStudents:
+          type: array
+          items:
+            $ref: '#/components/schemas/inline_response_200'
+    body_1:
+      type: object
+      properties:
+        entityClass_id:
+          type: integer

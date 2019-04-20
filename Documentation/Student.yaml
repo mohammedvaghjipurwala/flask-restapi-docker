@@ -1,0 +1,171 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: "0.1"
+servers:
+- url: http://127.0.0.1:4999
+paths:
+  /class/maths:
+    post:
+      description: Auto generated using Swagger Inspector
+      responses:
+        201:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_201'
+              examples:
+                0:
+                  value: |
+                    {
+                        "name": "maths",
+                        "entityStudents": [],
+                        "created_on": "2019-04-19 07:06:01",
+                        "updated_on": "2019-04-19 07:06:01"
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+  /class/science:
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                0:
+                  value: |
+                    {
+                        "message": "EntityClass deleted"
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+  /class/tamil:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+              examples:
+                0:
+                  value: |
+                    {
+                        "name": "tamil",
+                        "entityStudents": [
+                            {
+                                "name": "robby",
+                                "created_on": "2019-04-18 16:37:01",
+                                "updated_on": "2019-04-18 16:37:01",
+                                "entityClass_id": 1
+                            },
+                            {
+                                "name": "mustafa",
+                                "created_on": "2019-04-18 16:37:18",
+                                "updated_on": "2019-04-18 16:37:18",
+                                "entityClass_id": 1
+                            },
+                            {
+                                "name": "rahul",
+                                "created_on": "2019-04-18 18:22:58",
+                                "updated_on": "2019-04-18 18:23:47",
+                                "entityClass_id": 1
+                            }
+                        ],
+                        "created_on": "2019-04-18 16:17:54",
+                        "updated_on": "2019-04-18 16:44:24"
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+  /classes:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        200:
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_2'
+              examples:
+                0:
+                  value: |
+                    {
+                        "entityClasss": [
+                            {
+                                "name": "maths",
+                                "entityStudents": [],
+                                "created_on": "2019-04-19 07:13:11",
+                                "updated_on": "2019-04-19 07:13:11"
+                            }
+                        ]
+                    }
+      servers:
+      - url: http://127.0.0.1:4999
+    servers:
+    - url: http://127.0.0.1:4999
+components:
+  schemas:
+    inline_response_201:
+      type: object
+      properties:
+        updated_on:
+          type: string
+        created_on:
+          type: string
+        name:
+          type: string
+        entityStudents:
+          type: array
+          items:
+            type: string
+    inline_response_200:
+      type: object
+      properties:
+        message:
+          type: string
+    inline_response_200_1_entityStudents:
+      type: object
+      properties:
+        updated_on:
+          type: string
+        created_on:
+          type: string
+        name:
+          type: string
+        entityClass_id:
+          type: integer
+    inline_response_200_1:
+      type: object
+      properties:
+        updated_on:
+          type: string
+        created_on:
+          type: string
+        name:
+          type: string
+        entityStudents:
+          type: array
+          items:
+            $ref: '#/components/schemas/inline_response_200_1_entityStudents'
+    inline_response_200_2:
+      type: object
+      properties:
+        entityClasss:
+          type: array
+          items:
+            $ref: '#/components/schemas/inline_response_201'
